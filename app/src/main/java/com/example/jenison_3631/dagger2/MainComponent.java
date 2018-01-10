@@ -7,8 +7,12 @@ import dagger.Component;
 /**
  * Created by jenison-3631 on 22/08/17.
  */
-@Singleton
-@Component(modules = {ApplnModule.class})
-public interface AppComponent {
+@Component(modules = {MainModule.class})
+@MainActivityScope
+public interface MainComponent {
     void inject(MainActivity mainActivity);
+
+    MesasgeObject getmessgaeobject();
+
+    void inject(MainActivityTest testCalss);
 }

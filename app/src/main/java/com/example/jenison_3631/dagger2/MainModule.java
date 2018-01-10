@@ -12,17 +12,13 @@ import dagger.Provides;
  */
 
 @Module
-public class ApplnModule {
+public class MainModule {
 
     Context context;
 
-    public ApplnModule(Context context){
+    public MainModule(Context context){
         this.context=context;
     }
 
-    @Provides
-    @Singleton
-    JenisonMessageProvider provideJenisonMessage(){
-       return new JenisonMessageGenerator();
-    }
+
 }
